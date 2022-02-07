@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:display=swap');
+
+:root {
+    --text-color: rgb(58, 58, 58);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 300;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Navbar styles */
+nav {
+    position: sticky;
+    top: -1;
+    display: flex;
+    justify-content: flex-end;
+    width: 900px;
+    margin: 30px auto;
+    padding: 32px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.664);
+    backdrop-filter: blur(1.2rem);
+}
+
+nav a {
+    text-decoration: none;
+    padding: 12px;
+    color: var(--text-color);
+}
+
+main {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+section {
+    padding: 50px;
+}
+
+section h2 {
+    font-size: 2rem;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+
+#welcome-section {
+    display: flex;
+    height: 80vh;
+}
+
+.welcome-img img{
+    border-radius: 50%;
+    height: 180px;
+    box-shadow: 0px 0px 2px #5f5f5f,
+    8px 8px 15px #8261f8;  
+}
+
+.welcome-info {
+    padding-right: 30px;
+    color: var(--text-color);
+}
+
+.welcome-info p {
+    padding-bottom: 3px;
+}
+
+.welcome-info span {
+    background-image: linear-gradient(90deg,red, blue);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+}
+
+.welcome-info span:hover {
+    background-size: 0% 3px;
+}
+
+.welcome-info h1 {
+    color: black;
+    font-style: inherit;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-bottom: 20px;
+}
+
+.project-link-tile {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.project-tile {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 4px 4px black;
+}
+
+.project-tile-img svg {
+    width: 42px;
+}
+
+.project-tile-img {
+    padding: 10px 10px 10px 0;
+}
+
+.project-tile h3 {
+    font-size: large;
+    color: black;
+}
+
+.project-tile span {
+    margin-top: 10px;
+    font-style: italic;
+    background-color: rgb(224, 224, 224);
+}
+
+.project-tile:hover {
+    box-shadow: 0 0;
+    transform: translate(4px) translateY(4px);
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+}
+
+.profile-link {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.contact-tile {
+    display: flex;
+    margin: 10px;
+}
+
+.contact-tile img {
+    width: 25px;
+    margin: 10px;
+}
+
+.contact-tile p {
+    margin: 20px 0 ;
+}
+
+footer {
+    color: rgb(105, 105, 105);
+    padding: 50px;
+    text-align: right;
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: fixed;
+        width: 100%;
+        margin: 0;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .welcome-info {
+        padding: 0;
+    }
+
+    .welcome-info h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 20px;
+    }
+
+    .welcome-img {
+        display: none;
+    }
+}
+
